@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2019_05_24_184452) do
   create_table "adoptions", force: :cascade do |t|
     t.integer "user_id"
     t.integer "pet_id"
+    t.string "open_or_closed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
