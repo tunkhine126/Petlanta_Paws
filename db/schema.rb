@@ -10,12 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_24_184452) do
+ActiveRecord::Schema.define(version: 2019_05_28_204130) do
 
   create_table "adoptions", force: :cascade do |t|
     t.integer "user_id"
     t.integer "pet_id"
     t.string "open_or_closed"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "pet_id"
+    t.string "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :users, only:[:show, :new, :create, :edit, :update, :destroy]
   resources :adoptions
   resources :pets
+  resources :comments
 
   get '/login', to: "sessions#new", as: 'login'
   post '/login', to: "sessions#create"
