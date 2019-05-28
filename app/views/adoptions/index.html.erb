@@ -1,0 +1,11 @@
+<h1>Petlanta Paws Successfully Completed Adoptions</h1>
+
+<h3>
+<% @adoptions.each do |adoption| %>
+  <%= link_to(adoption, adoption_path(adoption))  %>
+<br>
+<% end %>
+</h3>
+
+
+<%= link_to("Adopt a Dog", pets_path)git %>

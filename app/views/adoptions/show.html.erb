@@ -1,0 +1,6 @@
+<h1>Welcome to <%=@adoption.pet%>'s Adoption Page!</h1>
+<h2><%= image_tag(@pet.image_url) %></h2>
+<h3>Lucky Human Adopter <%= @adoption.user %></h3>
+<h3>Post-Adoption Status: <%= @adoption.open_or_closed %></h3>
+
+<%= link_to("All Adoptions", adoptions_path) %>
