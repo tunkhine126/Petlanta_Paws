@@ -8,5 +8,4 @@ class SessionsController < ApplicationController
      byebug
    end
 
-
 end
