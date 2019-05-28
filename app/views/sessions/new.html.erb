@@ -1,7 +1,15 @@
+<h1>Login Page</h1>
+  <% if @error %>
+    <p><%=@error%> </p>
+  <%end%>
+
+
   <%= form_tag(login_path) do %>
   <label>Username:</label>
-  <%= text_field_tag("Username") %>
+  <%= text_field_tag("username") %>
   <label>Password:</label>
-  <%= password_field_tag("Password") %>
+  <%= password_field_tag("password") %>
   <%= submit_tag("Login") %>
   <%end%>
+
+  <%= link_to("Create a New User", new_user_path)%>

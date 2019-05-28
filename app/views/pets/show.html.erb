@@ -21,6 +21,9 @@
 <label>Gender:</label>
 <%= @pet.gender %><br>
 
+<label>Selfie:</label>
+<img src="<%= @pet.img_url %>" alt="This is a picture of a pet"> <br>
+
 <%=link_to("Edit Pet Info", edit_pet_path(@pet))%>
 <%= link_to("Pet Index", pets_path)%>
 <%= link_to("Delete Pet Listing", pet_path(@pet), method: :delete)%>
