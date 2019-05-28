@@ -2,10 +2,10 @@
 
 <h3>
 <% @adoptions.each do |adoption| %>
-  <%= link_to(adoption, adoption_path(adoption))  %>
+  <%= link_to(adoption.id, adoption_path(adoption))  %>
 <br>
 <% end %>
 </h3>
 
 
-<%= link_to("Adopt a Dog", pets_path)git %>
+<%= link_to("Adopt a Pet", pets_path) %>

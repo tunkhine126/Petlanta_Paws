@@ -20,18 +20,18 @@ class AdoptionsController < ApplicationController
           render :new
       end 
   
-      def edit
-        @adoption = Adoption.find(params[:id]) 
-      end 
+      # def edit
+      #   @adoption = Adoption.find(params[:id]) 
+      # end 
   
-      def update
-        @adoption = Adoption.find(params[:id])
-        if @adoption.update(adoption_params)
-          redirect_to adoption_path(@adoption)
-        else 
-          render :edit
-        end 
-      end 
+      # def update
+      #   @adoption = Adoption.find(params[:id])
+      #   if @adoption.update(adoption_params)
+      #     redirect_to adoption_path(@adoption)
+      #   else 
+      #     render :edit
+      #   end 
+      # end 
   
       def destroy 
         @adoption = Adoption.find(params[:id])
@@ -42,7 +42,7 @@ class AdoptionsController < ApplicationController
       private 
   
       def adoption_params 
-        @adoption = params.require(:user, :pet).permit(:open_or_closed)
+        params.require(:adoption).permit(:user_id, :pet_id, :open_or_closed)
       end
     end
 end 
