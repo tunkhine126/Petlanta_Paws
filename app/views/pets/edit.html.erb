@@ -1,0 +1,12 @@
+<h1>Edit Pet Information</h1>
+
+<%= form_for(@pet) do |f|%>
+<%= f.text_field(:name, placeholder: "Name:") %><br>
+<%= f.text_field(:category, placeholder: "Type:") %><br>
+<%= f.text_field(:breed, placeholder: "Breed:") %><br>
+<%= f.number_field(:age, placeholder: "Age:") %><br>
+<%= f.text_field(:gender, placeholder: "Gender:") %><br>
+<%= f.text_field(:nick_name, placeholder: "Nickname:") %><br>
+<%= f.text_field(:color, placeholder: "Color:") %><br>
+<%= f.submit "Submit Edit" %>
+<%end%>
