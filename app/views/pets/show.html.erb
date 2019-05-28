@@ -15,6 +15,12 @@
 <label>Color:</label>
 <%= @pet.color %><br>
 
+<label>Age:</label>
+<%= @pet.age %><br>
+
+<label>Gender:</label>
+<%= @pet.gender %><br>
+
 <%=link_to("Edit Pet Info", edit_pet_path(@pet))%>
 <%= link_to("Pet Index", pets_path)%>
 <%= link_to("Delete Pet Listing", pet_path(@pet), method: :delete)%>
