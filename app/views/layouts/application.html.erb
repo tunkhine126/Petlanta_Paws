@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PetlantaPaws</title>
+    <title>Petlanta Paws</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,18 @@
   </head>
 
   <body>
+
+
+    <%if session[:user_id]%>
+      <%= link_to("Logout", logout_path)%>
+    <%else%>
+      <%= link_to('Login', login_path)%>
+    <%end%>
+
+
+
     <%= yield %>
+
+
   </body>
 </html>
