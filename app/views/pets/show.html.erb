@@ -24,6 +24,13 @@
 <label>Selfie:</label>
 <%= image_tag @pet.img_url %><br>
 
+<label>Comments:</label><br>
+<% @pet.comments.each do |comment|%>
+  <%= comment.text %>
+  <label>By:</label>
+  <%= comment.user.username.capitalize %><br>
+<%end%>
+
 <%=link_to("Edit Pet Info", edit_pet_path(@pet))%>
 <%= link_to("Pet Index", pets_path)%>
 <%= link_to("Delete Pet Listing", pet_path(@pet), method: :delete)%>
