@@ -1,4 +1,6 @@
 class PetsController < ApplicationController
+  before_action :require_login
+
 
   def index
     @pets = Pet.all
@@ -50,6 +52,10 @@ class PetsController < ApplicationController
 
    def pet_params
      params.require(:pet).permit(:name, :nick_name, :category, :breed, :gender, :age, :color, :img_url)
+   end
+
+   def require_login
+    return head(:forbidden) unless session.include? :user_id
    end
 
 end
