@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2019_05_24_184452) do
     t.string "color"
     t.string "nick_name"
     t.integer "adoption_id"
-    t.string "image_url"
+    t.string "img_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2019_05_24_184452) do
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "username"
+    t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
