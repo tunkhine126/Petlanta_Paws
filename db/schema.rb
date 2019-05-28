@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2019_05_24_184452) do
     t.string "color"
     t.string "nick_name"
     t.integer "adoption_id"
+    t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
