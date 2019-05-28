@@ -12,6 +12,9 @@
 <label>Breed:</label>
 <%= @pet.breed %><br>
 
+<label>Color:</label>
+<%= @pet.color %><br>
+
 <%=link_to("Edit Pet Info", edit_pet_path(@pet))%>
 <%= link_to("Pet Index", pets_path)%>
 <%= link_to("Delete Pet Listing", pet_path(@pet), method: :delete)%>
