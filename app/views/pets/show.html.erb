@@ -22,10 +22,16 @@
 <%= @pet.gender %><br>
 
 <label>Selfie:</label>
-<img src="<%= @pet.img_url %>" alt="This is a picture of a pet"> <br>
+<%= image_tag @pet.img_url %><br>
 
+<label>Comments:</label><br>
+<% @pet.comments.each do |comment|%>
+  <%= comment.text %>
+  <label>By:</label>
+  <%= comment.user.username.capitalize %><br>
+<%end%>
+
+<%=link_to("Create a Comment", new_comment_path(@pet))%>
 <%=link_to("Edit Pet Info", edit_pet_path(@pet))%>
 <%= link_to("Pet Index", pets_path)%>
 <%= link_to("Delete Pet Listing", pet_path(@pet), method: :delete)%>
-
-<%= image_tag @pet.image_url %>

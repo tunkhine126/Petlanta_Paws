@@ -1,4 +1,13 @@
-<h2><%= @user.username %></h2>
-<h2><%= @user.email%></h2>
 
-<h1><%= link_to("Pet Index", pets_path)%></h1>
+
+<h3><%= "Welcome #{@user.username.capitalize}! Glad to have you!"%></h3>
+
+
+
+<label>Username:</label>
+<%=@user.username%><br>
+
+<label>Email:</label>
+<%= @user.email%><br>
+
+<h3><%= link_to("Lets find you a new friend!", pets_path)%></h3>
