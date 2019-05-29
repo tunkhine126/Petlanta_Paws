@@ -1,4 +1,11 @@
 <h1>All Pets</h1>
+
+<form method="GET" action="<%= pets_path %>" >
+  <input name='search'>
+  <input type='submit' value='search'>
+</form>
+
+
   <ul>
     <%@pets.each do |pet|%>
       <li><%= link_to(pet.name, pet_path(pet))%></li>
