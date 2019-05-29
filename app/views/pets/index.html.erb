@@ -1,6 +1,6 @@
 <h1>All Pets</h1>
-<%@pets.each do |pet|%>
-<%= link_to(pet.name, pet_path(pet))%><br>
-<%end%>
+  <%@pets.each do |pet|%>
+    <li><%= link_to(pet.name, pet_path(pet))%></li>
+  <%end%>
 
 <h2><%=link_to("List a New Pet", new_pet_path)%></h2>
