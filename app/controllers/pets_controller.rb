@@ -3,7 +3,12 @@ class PetsController < ApplicationController
 
 
   def index
-    @pets = Pet.all
+    if !params[:search]
+      @pets ||= Pet.all
+    else
+      @pets ||= Pet.category_arr(params[:search])
+      @pets ||= Pet.all
+    end
   end
 
   def show

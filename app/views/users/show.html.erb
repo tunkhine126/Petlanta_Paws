@@ -1,5 +1,6 @@
-<h3><%= "Welcome #{@user.username.capitalize}! Glad to have you!"%></h3>
-
+<div class="alert alert-primary" role="alert">
+<br><br><h3><%= "Welcome #{@user.username.capitalize}! Glad to have you!"%></h3><br>
+</div>
   <div class="account-details">
     <ul>
       <li><label>Username:</label>
@@ -16,5 +17,14 @@
         <% @user.pets.each do |pet|%>
         <li><%=link_to(pet.name, pet_path(pet))%></li><br>
         <%end%>
+    </ul>
+  </div>
+
+  <div class="my-comments">
+    <ul>
+      <label>My Comments:</label><br>
+        <%@user.comments.each do |comment|%>
+            <li><%=link_to(comment.text, pet_path(comment.pet))%></li>
+          <%end%>
     </ul>
   </div>
