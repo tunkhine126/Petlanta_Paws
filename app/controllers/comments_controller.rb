@@ -35,5 +35,10 @@ class CommentsController < ApplicationController
    return head(:forbidden) unless session.include? :user_id
   end
 
+  def find_user
+    @user = User.find_by(id: session[:user_id])
+    return @user.id
+  end
+
 
 end

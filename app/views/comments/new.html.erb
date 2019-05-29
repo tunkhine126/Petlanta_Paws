@@ -3,9 +3,9 @@
 
 <%= form_for(@comment) do |f|  %>
 <%= f.text_area(:text, placeholder: "Enter Comment Here", :size => "50x5")%><br>
+<%= f.hidden_field(:user_id, value: session[:user_id])%>
 <%= f.collection_select(:pet_id, Pet.all, :id, :name)%>
-<%= f.collection_select(:user_id, User.all, :id, :username)%><br><br>
-<%= f.submit "Submit Comment" %><br><br>
+<%= f.submit "Submit Comment" %>
 <%end%>
 
 
