@@ -1,4 +1,6 @@
-<h1>Pet Information</h1>
+<div class="alert alert-primary" role="alert">
+<br><br><h1>Pet Information</h1>
+</div>
 
   <div class="pet-information">
     <ul class="pet-info-details">
@@ -23,34 +25,40 @@
       <li><label>Gender:</label>
       <%= @pet.gender %><br></li>
 
-      <label>Adoption Status:</label>
+      <li><label>Adoption Status:</label>
       <% if @pet.user %>
         <%= "#{@pet.name} has been adopted by #{@pet.user.username.capitalize}!" %>
       <%else%>
         <%= "#{@pet.name} is still up for adoption!"%>
-        <%= link_to("Adopt me!", new_adoption_path)%>
+        <%= link_to("Adopt me!", new_adoption_path)%></li>
       <%end%>
     </ul>
   </div>
 
-<label>Selfie:</label><br>
-<%= image_tag(@pet.img_url, size: "650x900") %><br>
 
+  <div class="container-fluid">
+    <label>Selfie:</label><br>
+    <%= image_tag(@pet.img_url, size: "650x900") %><br>
+    <label>Likes:</label>
+    <h2><%=@pet.likes.count%></h2><br><br>
+  </div>
 
-<label>Comments:</label>
-<ul class="comments">
-  <% @pet.comments.each do |comment|%>
-    <li class="comment">
-      <%= comment.text %>
-    <label>By:</label>
-    <%= comment.user.username.capitalize %><br>
-    </li>
-  <%end%>
-</ul >
-
+<div class="container-fluid">
+  <label>Comments:</label>
+    <ul class="comments">
+      <% @pet.comments.each do |comment|%>
+        <li class="comment"> <%= comment.text %>
+        <label>By:</label>
+        <%= comment.user.username.capitalize %><br>
+        </li>
+      <%end%>
+    </ul >
+ </div>
+ 
 <div class="actions">
   <ul class="pet-actions">
     <li> <%= link_to("Create a Comment", new_comment_path(@pet))%> </li>
+    <li> <%= link_to("Like!", new_like_path)%> </li>
     <li> <%= link_to("Adopt", new_adoption_path)%>
     <li> <%= link_to("Edit Pet Info", edit_pet_path(@pet))%> </li>
     <li> <%= link_to("Pet Index", pets_path)%> </li>

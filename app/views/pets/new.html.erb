@@ -1,15 +1,22 @@
-<h1>Add a New Pet for Listing</h1>
-<div class="form">
+<div class="alert alert-primary" role="alert">
+<br><br><h1>Add a New Pet for Listing</h1>
+</div>
+
+<div class="container-fluid">
+
 <%= form_for(@pet) do |f|%>
-<%= f.text_field(:name, placeholder: "Name:") %><br>
-<%= f.text_field(:category, placeholder: "Type:") %><br>
-<%= f.text_field(:breed, placeholder: "Breed:") %><br>
-<%= f.number_field(:age, placeholder: "Age:") %><br>
-<%= f.text_field(:gender, placeholder: "Gender:") %><br>
-<%= f.text_field(:nick_name, placeholder: "Nickname:") %><br>
-<%= f.text_field(:color, placeholder: "Color:") %><br>
-<%= f.text_field(:img_url, placeholder: "Image URL:") %><br>
-<%= f.submit "Submit Pet" %>
+<%= f.text_field(:name, placeholder: "Name:") %><br><br>
+<%= f.text_field(:category, placeholder: "Type:") %><br><br>
+<%= f.text_field(:breed, placeholder: "Breed:") %><br><br>
+<%= f.number_field(:age, placeholder: "Age:") %><br><br>
+<%= f.text_field(:gender, placeholder: "Gender:") %><br><br>
+<%= f.text_field(:nick_name, placeholder: "Nickname:") %><br><br>
+<%= f.text_field(:color, placeholder: "Color:") %><br><br>
+<%= f.text_field(:img_url, placeholder: "Image URL:") %><br><br>
+<%= f.submit "Submit Pet" %><br><br>
 <%end%>
 </div>
+
+<div class="container-fluid">
 <%= link_to("Back to Pet Index", pets_path)%>
+</div>
