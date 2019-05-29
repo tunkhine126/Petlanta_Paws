@@ -35,27 +35,30 @@
     </ul>
   </div>
 
+
   <div class="container-fluid">
     <label>Selfie:</label><br>
     <%= image_tag(@pet.img_url, size: "650x900") %><br>
+    <label>Likes:</label>
+    <h2><%=@pet.likes.count%></h2><br><br>
   </div>
 
 <div class="container-fluid">
-<label>Comments:</label>
-<ul class="comments">
-  <% @pet.comments.each do |comment|%>
-    <li class="comment">
-      <%= comment.text %>
-    <label>By:</label>
-    <%= comment.user.username.capitalize %><br>
-    </li>
-  <%end%>
-</ul >
+  <label>Comments:</label>
+    <ul class="comments">
+      <% @pet.comments.each do |comment|%>
+        <li class="comment"> <%= comment.text %>
+        <label>By:</label>
+        <%= comment.user.username.capitalize %><br>
+        </li>
+      <%end%>
+    </ul >
  </div>
  
 <div class="actions">
   <ul class="pet-actions">
     <li> <%= link_to("Create a Comment", new_comment_path(@pet))%> </li>
+    <li> <%= link_to("Like!", new_like_path)%> </li>
     <li> <%= link_to("Adopt", new_adoption_path)%>
     <li> <%= link_to("Edit Pet Info", edit_pet_path(@pet))%> </li>
     <li> <%= link_to("Pet Index", pets_path)%> </li>

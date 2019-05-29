@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :adoptions
   resources :pets
   resources :comments
+  resources :likes, only:[:new, :create, :destroy, :show]
 
   get '/login', to: "sessions#new", as: 'login'
   post '/login', to: "sessions#create"
