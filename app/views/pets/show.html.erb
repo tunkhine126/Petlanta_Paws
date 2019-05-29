@@ -28,6 +28,7 @@
         <%= "#{@pet.name} has been adopted by #{@pet.user.username.capitalize}!" %>
       <%else%>
         <%= "#{@pet.name} is still up for adoption!"%>
+        <%= link_to("Adopt me!", new_adoption_path)%>
       <%end%>
     </ul>
   </div>
