@@ -2,7 +2,7 @@
 
 <h3>
 <% @adoptions.each do |adoption| %>
-  <%= link_to(adoption.id, adoption_path(adoption))  %>
+  <%= link_to(adoption.pet.name, adoption_path(adoption))  %>
 <br>
 <% end %>
 </h3>

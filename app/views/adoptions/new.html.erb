@@ -1,0 +1,8 @@
+<h1>You want to adopt? Fantastic!</h1>
+
+
+<%= form_for(@adoption) do |f| %>
+  <%= f.label @user.username %>
+  <%= f.collection_select(:pet_id, Pet.all, :id, :name) %>
+  <%= f.submit ("Adopt")%>
+<% end %>
