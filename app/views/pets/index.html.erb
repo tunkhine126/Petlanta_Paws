@@ -1,7 +1,16 @@
 <h1>All Pets</h1>
+
+<h4>Search by Pet Type:</h4>
+  <%= form_tag(pets_path, method: :get) do %>
+    <%# <%= text_field_tag(:search, params[:search]) %>
+    <%= select_tag 'search', options_for_select(@pets.collect{ |p| [p.category] }.uniq!) %>
+    <%= submit_tag ("Search Pets") %>
+    <% end %>
+
   <ul>
     <%@pets.each do |pet|%>
       <li><%= link_to(pet.name, pet_path(pet))%></li>
     <%end%>
   </ul>
+<h2><%=link_to("Back to All Pets", pets_path)%></h2>
 <h2><%=link_to("List a New Pet", new_pet_path)%></h2>
