@@ -35,6 +35,8 @@
 
 <label>Selfie:</label><br>
 <%= image_tag(@pet.img_url, size: "650x900") %><br>
+<label>Likes:</label>
+<h2><%=@pet.likes.count%></h2><br><br>
 
 
 <label>Comments:</label>
@@ -52,6 +54,7 @@
   <ul class="pet-actions">
     <li> <%= link_to("Create a Comment", new_comment_path(@pet))%> </li>
     <li> <%= link_to("Adopt Me", new_adoption_path)%>
+    <li><%=link_to("Like!", new_like_path)%></li>
     <li> <%= link_to("Edit Pet Info", edit_pet_path(@pet))%> </li>
     <li> <%= link_to("Pet Index", pets_path)%> </li>
     <li> <%= link_to("Delete Pet Listing", pet_path(@pet), data: {confirm: "Are you sure you want to delete the pet listing for #{@pet.name} the #{@pet.category}?"},
