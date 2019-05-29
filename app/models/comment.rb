@@ -1,7 +1,7 @@
 class Comment < ApplicationRecord
   belongs_to :user
   belongs_to :pet
-
+  validates :text, presence: true
 
   # def user_comments
   #   @user = User.find_by(id: session[:user_id])

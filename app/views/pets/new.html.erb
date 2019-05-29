@@ -2,6 +2,14 @@
 <br><br><h1>Add a New Pet for Listing</h1>
 </div>
 
+<% if @pet.errors %>
+  <ul>
+    <% @pet.errors.full_messages.each do |msg| %>
+      <li style="color: red;"><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <div class="container-fluid">
 
 <%= form_for(@pet) do |f|%>
@@ -20,3 +28,4 @@
 <div class="container-fluid">
 <%= link_to("Back to Pet Index", pets_path)%>
 </div>
+

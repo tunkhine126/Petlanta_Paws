@@ -6,6 +6,14 @@
 <h1>Create a New Comment</h1>
 </div>
 
+<% if @comment.errors %>
+  <ul>
+    <% @comment.errors.full_messages.each do |msg| %>
+      <li style="color: red;"><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <div class="container-fluid">
 <%= form_for(@comment) do |f|  %>
 <%= f.text_area(:text, placeholder: "Enter Comment Here", :size => "50x5")%><br>
