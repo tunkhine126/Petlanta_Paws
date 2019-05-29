@@ -2,13 +2,17 @@
 <br><br><h1>You want to adopt? Fantastic!</h1>
 </div>
 
-<div class="container-fluid">
-<%= form_for(@adoption) do |f| %>
-  <%= f.hidden_field(:user_id, value: session[:user_id])%>
-  <%= f.collection_select(:pet_id, Pet.all, :id, :name) %>
-  <%= f.submit ("Adopt")%><br><br>
+<%= form_tag(adoptions_path) do %>
+  <select name="adoption[pet_id]">
+    <% Pet.all.sort_by(&:name).each do |pet| %>
+      <% if pet.adoption.nil? %>
+        <option value="<%= pet.id %>"><%= pet.name %></option>
+      <% end %>
+    <% end %>
+  </select>
+  <input type="submit" value="Adopt!">
 <% end %>
-</div>
+
 
 <div class="container-fluid">
 <label>This could be you!</label><br>

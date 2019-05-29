@@ -1,7 +1,9 @@
 <div class="alert alert-primary" role="alert">
 <br><br><h1>Add a New Pet for Listing</h1>
 </div>
+
 <div class="container-fluid">
+
 <%= form_for(@pet) do |f|%>
 <%= f.text_field(:name, placeholder: "Name:") %><br><br>
 <%= f.text_field(:category, placeholder: "Type:") %><br><br>
@@ -14,6 +16,7 @@
 <%= f.submit "Submit Pet" %><br><br>
 <%end%>
 </div>
+
 
 <div class="container-fluid">
 <%= link_to("Back to Pet Index", pets_path)%>
