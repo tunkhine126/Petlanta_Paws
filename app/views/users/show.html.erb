@@ -1,13 +1,18 @@
-
-
 <h3><%= "Welcome #{@user.username.capitalize}! Glad to have you!"%></h3>
+  <div class="account-details">
+    <ul>
+      <li><label>Username:</label>
+        <%=@user.username%><br></li>
+      <li><label>Email:</label>
+        <%= @user.email%><br></li>
+    </ul>
+  </div>
 
 
 
-<label>Username:</label>
-<%=@user.username%><br>
+<form method="get" action= '/pets'>
+    <button class="ui button" type="submit">Find a new friend?</button>
+</form>
 
-<label>Email:</label>
-<%= @user.email%><br>
 
-<h3><%= link_to("Lets find you a new friend!", pets_path)%></h3>
+#experimenting with buttons ^^
