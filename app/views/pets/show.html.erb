@@ -1,30 +1,52 @@
 <h1>Pet Information</h1>
 
-<label>Name:</label>
-<%= @pet.name %><br>
+  <div class="pet-information">
+    <ul class="pet-info-details">
+      <li><label>Name:</label>
+      <%= @pet.name.capitalize %><br></li>
 
-<label>Nickname:</label>
-<%= @pet.nick_name %><br>
+      <li><label>Nickname:</label>
+      <%= @pet.nick_name %><br></li>
 
-<label>Pet Type:</label>
-<%= @pet.category %><br>
+      <li><label>Pet Type:</label>
+      <%= @pet.category %><br></li>
 
-<label>Breed:</label>
-<%= @pet.breed %><br>
+      <li><label>Breed:</label>
+      <%= @pet.breed %><br></li>
 
-<label>Color:</label>
-<%= @pet.color %><br>
+      <li><label>Color:</label>
+      <%= @pet.color %><br></li>
 
-<label>Age:</label>
-<%= @pet.age %><br>
+      <li><label>Age:</label>
+      <%= @pet.age %><br></li>
 
-<label>Gender:</label>
-<%= @pet.gender %><br>
+      <li><label>Gender:</label>
+      <%= @pet.gender %><br></li>
+    </ul>
+  </div>
 
-<label>Selfie:</label>
-<%= image_tag(@pet.img_url) %><br>
+<label>Selfie:</label><br>
+<%= image_tag(@pet.img_url, size: "650x900") %><br>
 
-<%= link_to("Adopt Me", new_adoption_path)%>
-<%= link_to("Edit Pet Info", edit_pet_path(@pet))%>
-<%= link_to("Pet Index", pets_path)%>
-<%= link_to("Delete Pet Listing", pet_path(@pet), method: :delete)%>
+
+<label>Comments:</label>
+<ul class="comments">
+  <% @pet.comments.each do |comment|%>
+    <li class="comment">
+      <%= comment.text %>
+    <label>By:</label>
+    <%= comment.user.username.capitalize %><br>
+    </li>
+  <%end%>
+</ul >
+
+<div class="actions">
+  <ul class="pet-actions">
+    <li> <%= link_to("Create a Comment", new_comment_path(@pet))%> </li>
+    <li> <%= link_to("Adopt Me", new_adoption_path)%> %>
+    <li> <%= link_to("Edit Pet Info", edit_pet_path(@pet))%> </li>
+    <li> <%= link_to("Pet Index", pets_path)%> </li>
+    <li> <%= link_to("Delete Pet Listing", pet_path(@pet), data: {confirm: "Are you sure you want to delete the pet listing for #{@pet.name} the #{@pet.category}?"},
+      method: :delete)%> </li>
+  </ul>
+</div>
