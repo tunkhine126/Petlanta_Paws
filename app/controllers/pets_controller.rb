@@ -3,7 +3,7 @@ class PetsController < ApplicationController
 
 
   def index
-    if params[:search] == '' || params[:search] == nil
+    if !params[:search]
       @pets ||= Pet.all
     else
       @pets ||= Pet.category_arr(params[:search])
