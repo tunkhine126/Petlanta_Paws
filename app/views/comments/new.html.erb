@@ -2,7 +2,7 @@
 
 <%= form_for(@comment) do |f|  %>
 <%= f.text_field(:text, placeholder: "Enter Comment Here")%>
+<%= f.hidden_field(:user_id, value: session[:user_id])%>
 <%= f.collection_select(:pet_id, Pet.all, :id, :name)%>
-<%= f.collection_select(:user_id, User.all, :id, :username)%>
 <%= f.submit "Submit Comment" %>
 <%end%>
