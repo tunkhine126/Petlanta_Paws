@@ -1,4 +1,5 @@
 <h3><%= "Welcome #{@user.username.capitalize}! Glad to have you!"%></h3>
+
   <div class="account-details">
     <ul>
       <li><label>Username:</label>
@@ -9,10 +10,11 @@
   </div>
 
 
-
-<form method="get" action= '/pets'>
-    <button class="ui button" type="submit">Find a new friend?</button>
-</form>
-
-
-#experimenting with buttons ^^
+  <div class="my-pets">
+    <ul>
+      <label>My Pets:</label><br>
+        <% @user.pets.each do |pet|%>
+        <li><%=link_to(pet.name, pet_path(pet))%></li><br>
+        <%end%>
+    </ul>
+  </div>
