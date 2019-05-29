@@ -1,5 +1,5 @@
 <h1>Add a New Pet for Listing</h1>
-
+<div class="form">
 <%= form_for(@pet) do |f|%>
 <%= f.text_field(:name, placeholder: "Name:") %><br>
 <%= f.text_field(:category, placeholder: "Type:") %><br>
@@ -11,6 +11,5 @@
 <%= f.text_field(:img_url, placeholder: "Image URL:") %><br>
 <%= f.submit "Submit Pet" %>
 <%end%>
-
-
+</div>
 <%= link_to("Back to Pet Index", pets_path)%>
