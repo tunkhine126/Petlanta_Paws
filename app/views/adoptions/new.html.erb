@@ -1,11 +1,17 @@
-<h1>You want to adopt? Fantastic!</h1>
+<div class="alert alert-primary" role="alert">
+<br><br><h1>You want to adopt? Fantastic!</h1>
+</div>
 
-
+<div class="container-fluid">
 <%= form_for(@adoption) do |f| %>
   <%= f.hidden_field(:user_id, value: session[:user_id])%>
   <%= f.collection_select(:pet_id, Pet.all, :id, :name) %>
-  <%= f.submit ("Adopt")%>
+  <%= f.submit ("Adopt")%><br><br>
 <% end %>
+</div>
 
+<div class="container-fluid">
+<label>This could be you!</label><br>
 <img src="https://media0.giphy.com/media/lHsCS3IickU7e/giphy.gif?cid=790b76115ceea2cf654566665921e771&rid=giphy.gif">
-<label>This could be you!</label>
+
+</div>

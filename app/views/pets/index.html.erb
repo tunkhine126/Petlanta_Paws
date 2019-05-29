@@ -1,7 +1,13 @@
-<h1>All Pets</h1>
+<div class="alert alert-primary" role="alert">
+<br><br><h1>All Pets</h1>
+</div>
+  <div class="container-fluid">
   <ul>
     <%@pets.each do |pet|%>
       <li><%= link_to(pet.name, pet_path(pet))%></li>
     <%end%>
   </ul>
+  </div>
 <h2><%=link_to("List a New Pet", new_pet_path)%></h2>
+
+

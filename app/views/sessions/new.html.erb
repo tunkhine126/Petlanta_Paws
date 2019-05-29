@@ -1,17 +1,26 @@
-<h1>Welcome to Petlanta Paws</h1>
-<h2>Login Page</h2>
+<br><br>
+<div class="alert alert-primary" role="alert">
+  <h1>Welcome to Petlanta Paws</h1>
+</div>
+<div class="container-fluid">
+<h2>Login Page</h2><br>
+</div>
 
 
   <% if @error %>
     <p><%=@error%> </p>
   <%end%>
-
+<div class="container-fluid">
   <%= form_tag(login_path) do %>
   <label>Username:</label>
-  <%= text_field_tag("username") %>
+  <%= text_field_tag("username") %><br>
   <label>Password:</label>
-  <%= password_field_tag("password") %>
-  <%= submit_tag("Login") %>
+  <%= password_field_tag("password") %><br><br>
+  <%= submit_tag("Login") %><br><br>
   <%end%>
-
-  <%= link_to("Create a New User", new_user_path)%>
+</div>
+  
+<div class="container-fluid">
+<%= link_to("Create a New User", new_user_path)%>
+</div>
+  

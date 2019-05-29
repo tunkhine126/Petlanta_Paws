@@ -1,5 +1,7 @@
+<div class="container-fluid">
 <h1>Edit Pet Information</h1>
-
+</div>
+<div class="container-fluid">
 <%= form_for(@pet) do |f|%>
 <%= f.text_field(:name, placeholder: "Name:") %><br>
 <%= f.text_field(:category, placeholder: "Type:") %><br>
@@ -11,3 +13,4 @@
 <%= f.text_field(:img_url, placeholder: "Image URL:") %><br>
 <%= f.submit "Submit Edit" %>
 <%end%>
+</div>
