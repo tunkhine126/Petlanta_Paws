@@ -1,8 +1,11 @@
+<br><%= link_to 'Back to show page', :back %>
 <h1>Create a New Comment</h1>
 
 <%= form_for(@comment) do |f|  %>
-<%= f.text_field(:text, placeholder: "Enter Comment Here")%>
+<%= f.text_area(:text, placeholder: "Enter Comment Here", :size => "50x5")%><br>
 <%= f.hidden_field(:user_id, value: session[:user_id])%>
 <%= f.collection_select(:pet_id, Pet.all, :id, :name)%>
 <%= f.submit "Submit Comment" %>
 <%end%>
+
+
