@@ -1,4 +1,4 @@
-<div class="alert alert-primary" role="alert">
+<div class="container-fluid">
 <br><br><h1>All Pets</h1>
 </div>
 
@@ -6,7 +6,7 @@
 
   <h4>Search by Pet Type:</h4>
     <%= form_tag(pets_path, method: :get) do %>
-      <%= select_tag 'search', options_for_select(@pets.collect{ |p| [p.category] }.uniq!.insert(0, "Select a Pet Type")) %>
+      <%= select_tag 'search', options_for_select(@pets.collect{ |p| [p.category] }.uniq!.insert(0, "Select a Pet Type")) %><br>
       <%= submit_tag ("Search Pets") %>
     <% end %>
 <h2><%=link_to("List a New Pet", new_pet_path)%></h2>
