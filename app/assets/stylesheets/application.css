@@ -29,7 +29,7 @@ body.adoptions{
 }
 
 body.newcomment{
-	background: url("frenchies.jpg") no-repeat center center fixed;
+	background: url("kitty.jpg") no-repeat center center fixed;
 	background-size: cover;
 	height: 100%;
 	overflow: hidden;
@@ -43,16 +43,30 @@ body.usershow{
 }
 
 body.allpets{
-	background: url("white_kitty.jpg") no-repeat center center fixed;
+	background: url("adorable.jpg") no-repeat center center fixed;
 	background-size: cover;
 	height: 90%;
 	overflow: visible;
 }
 
 body.danceparty{
-	background: url("disco.jpg") no-repeat center center fixed;
+	background: url("danceparty.jpg") no-repeat center center fixed;
 	background-size: cover;
 	height: 90%;
+	overflow: visible;
+}
+
+body.new_pet{
+	background: url("parrot_2.jpg") no-repeat center center fixed;
+	background-size: cover;
+	height: 100%;
+	overflow: visible;
+}
+
+body.petshow{
+	background: url("granite.jpg") no-repeat center center fixed;
+	background-size: cover;
+	height: 100%;
 	overflow: visible;
 }
 
