@@ -46,11 +46,15 @@
 <div class="container-fluid">
   <label>Comments:</label>
     <ul class="comments">
-      <% @pet.comments.each do |comment|%>
-        <li class="comment"> <%= comment.text %>
-        <label>By:</label>
-        <%= comment.user.username.capitalize %><br>
-        </li>
+      <%if @pet.comments.empty?%>
+        <%="No comments"%>
+      <%else%>
+        <% @pet.comments.each do |comment|%>
+          <li class="comment"> <%= comment.text %>
+          <label>By:</label>
+          <%= comment.user.username.capitalize %><br>
+          </li>
+      <%end%>
       <%end%>
     </ul >
  </div>
