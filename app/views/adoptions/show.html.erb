@@ -1,10 +1,41 @@
 <div class="alert alert-primary" role="alert">
-<h1>Petlanta Paws Successfully Completed Adoptions</h1>
+  <h1>Petlanta Paws Adoption Successfully Completed</h1>
 </div>
-<div class="container-fluid">
-<h3>
-  <%= @adoption.pet.name %> was adopted by <%= @adoption.user.username %>
-</h3>
 
-<h3> Congrats on your new forever home! </h3>
-</div>
+
+  <div class="container-fluid">
+    <h4>
+      Congratulations <%= @adoption.user.username.capitalize %>! You have adopted <%= @adoption.pet.name %>.
+    </h4>
+
+    <h4> <%= @adoption.pet.name %> is very excited for his/her new home! </h4>
+      <%= image_tag(@adoption.pet.img_url, size: "400x600") %><br>
+  </div>
+
+  <div class="pet-adoption-information">
+    <ul class="pet-adoption-info-details">
+      <li><label>Name:</label>
+      <%= @adoption.pet.name.capitalize %><br></li>
+
+      <li><label>Nickname:</label>
+      <%= @adoption.pet.nick_name %><br></li>
+
+      <li><label>Pet Type:</label>
+      <%= @adoption.pet.category %><br></li>
+
+      <li><label>Breed:</label>
+      <%= @adoption.pet.breed %><br></li>
+
+      <li><label>Color:</label>
+      <%= @adoption.pet.color %><br></li>
+
+      <li><label>Age:</label>
+      <%= @adoption.pet.age %><br></li>
+
+      <li><label>Gender:</label>
+      <%= @adoption.pet.gender %><br></li>
+
+      <li><label>New Owner:</label>
+      <%= @adoption.user.username.capitalize %><br></li>
+
+  </div>

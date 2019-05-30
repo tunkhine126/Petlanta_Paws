@@ -48,6 +48,11 @@ class PetsController < ApplicationController
   end
 
 
+  def danceparty
+    @user = User.find_by(id: session[:user_id])
+  end
+
+
 
 
 
