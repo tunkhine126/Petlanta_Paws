@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+  skip_before_action :verify_authenticity_token
 
     def show
       @user = User.find(params[:id])
@@ -33,9 +33,9 @@ class UsersController < ApplicationController
     end
 
     def destroy
-      @user = User.find(user_params)
+      @user = User.find(session[:user_id])
       @user.destroy
-      redirect_to users_path
+      redirect_to '/login'
     end
 
     private
