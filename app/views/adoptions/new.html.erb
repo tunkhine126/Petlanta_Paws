@@ -1,5 +1,6 @@
+<body class="container adoptions">
 <div class="container-fluid">
-<br><br><h1>You want to adopt? Fantastic!</h1>
+<br><h2>Ready to adopt? </h2>
 </div>
 
 <%= form_tag(adoptions_path) do %>
@@ -9,13 +10,10 @@
         <option value="<%= pet.id %>"><%= pet.name %></option>
       <% end %>
     <% end %>
-  </select>
+  </select><br>
   <input type="submit" value="Adopt!">
 <% end %>
 
 
-<div class="container-fluid">
-<label>This could be you!</label><br>
-<img src="https://media0.giphy.com/media/lHsCS3IickU7e/giphy.gif?cid=790b76115ceea2cf654566665921e771&rid=giphy.gif">
-
 </div>
+</body>

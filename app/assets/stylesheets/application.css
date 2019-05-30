@@ -21,13 +21,19 @@ body.home{
 	overflow: hidden;
 }
 
+body.adoptions{
+	background: url("adoption.jpg") no-repeat center center fixed;
+	background-size: cover;
+	height: 50%;
+	overflow: visible;
+}
+
 body.newcomment{
 	background: url("frenchies.jpg") no-repeat center center fixed;
 	background-size: cover;
 	height: 100%;
 	overflow: hidden;
 }
-
 
 body.usershow{
 	background: url("cute_puppy.jpg") no-repeat center center fixed;
@@ -36,7 +42,6 @@ body.usershow{
 	overflow: hidden;
 }
 
-
 body.allpets{
 	background: url("white_kitty.jpg") no-repeat center center fixed;
 	background-size: cover;
@@ -44,14 +49,12 @@ body.allpets{
 	overflow: visible;
 }
 
-
 body.danceparty{
 	background: url("disco.jpg") no-repeat center center fixed;
 	background-size: cover;
 	height: 90%;
 	overflow: visible;
 }
-
 
  body {
   background-color: lightblue;
