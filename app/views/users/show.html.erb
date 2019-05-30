@@ -18,10 +18,13 @@
     <ul>
       <label>My Pets:</label><br>
         <% @user.pets.each do |pet|%>
-        <li><%=link_to(pet.name, pet_path(pet))%></li><br>
+        <li><%=link_to(pet.name, pet_path(pet))%> :: <%= link_to("Edit #{pet.name}", edit_pet_path(pet))%> :: <%= link_to("Delete Pet Listing", pet_path(pet), data: {confirm: "Are you sure you want to delete the pet listing for #{pet.name} the #{pet.category}?"},
+          method: :delete)%> </li>
         <% end %>
     </ul>
   </div>
+
+
 
   <div class="my-comments">
     <ul>
