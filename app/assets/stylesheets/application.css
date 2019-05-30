@@ -20,6 +20,14 @@ body.home{
 	height: 100%;
 	overflow: hidden;
 }
+
+body.adoptions{
+	background: url("adoption.jpg") no-repeat center center fixed;
+	background-size: cover;
+	height: 50%;
+	overflow: visible;
+}
+
  body {
   background-color: lightblue;
 }

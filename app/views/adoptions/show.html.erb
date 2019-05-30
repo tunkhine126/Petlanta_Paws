@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <h1>Petlanta Paws Adoption Successfully Completed</h1>
-</div>
+</div><br><br>
 
 
   <div class="container-fluid">
@@ -8,11 +8,11 @@
       Congratulations <%= @adoption.user.username.capitalize %>! You have adopted <%= @adoption.pet.name %>.
     </h4>
 
-    <h4> <%= @adoption.pet.name %> is very excited for his/her new home! </h4>
-      <%= image_tag(@adoption.pet.img_url, size: "400x600") %><br>
+    <h4> <%= @adoption.pet.name %> is very excited for his/her new home! </h4><br><br>
+      <%= image_tag(@adoption.pet.img_url, size: "400x600") %><br><br>
   </div>
 
-  <div class="pet-adoption-information">
+ <div class="container-fluid">
     <ul class="pet-adoption-info-details">
       <li><label>Name:</label>
       <%= @adoption.pet.name.capitalize %><br></li>
@@ -37,5 +37,6 @@
 
       <li><label>New Owner:</label>
       <%= @adoption.user.username.capitalize %><br></li>
-
+    </div>
+    
   </div>
