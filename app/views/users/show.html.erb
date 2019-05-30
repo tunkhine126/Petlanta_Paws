@@ -1,5 +1,5 @@
 <div class="alert alert-primary" role="alert">
-<br><br><h3><%= "Welcome #{@user.username.capitalize}! Glad to have you!"%></h3><br>
+<br><br><h3><%= "Hello #{@user.username.capitalize}. Welcome to Petlanta Paws!"%></h3><br>
 </div>
   <div class="account-details">
     <ul>
@@ -7,6 +7,7 @@
         <%=@user.username%><br></li>
       <li><label>Email:</label>
         <%= @user.email%><br></li>
+        <%=link_to("Edit Your Information", edit_user_path(@user))%><br><br>
     </ul>
   </div>
 
