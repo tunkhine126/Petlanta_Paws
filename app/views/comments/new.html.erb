@@ -2,7 +2,7 @@
 <br><%= link_to 'Back to show page', :back %>
 </div>
 
-<div class="alert alert-primary" role="alert">
+<div class="container-fluid">
 <h1>Create a New Comment</h1>
 </div>
 
@@ -18,7 +18,7 @@
 <%= form_for(@comment) do |f|  %>
 <%= f.text_area(:text, placeholder: "Enter Comment Here", :size => "50x5")%><br>
 <%= f.hidden_field(:user_id, value: session[:user_id])%>
-<%= f.collection_select(:pet_id, Pet.all, :id, :name)%>
+<%= f.collection_select(:pet_id, Pet.all, :id, :name)%><br>
 <%= f.submit "Submit Comment" %>
 <%end%>
 </div>
