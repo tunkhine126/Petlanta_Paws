@@ -5,7 +5,7 @@
 <br><br><h1>Pet Information</h1>
 </div>
 
-  <div class="pet-information">
+  <div class="b">
     <ul class="pet-info-details">
       <li><label>Name:</label>
       <%= @pet.name.capitalize %><br></li>
@@ -33,17 +33,16 @@
         <%= "#{@pet.name} has been adopted by #{@pet.user.username.capitalize}!" %>
       <%else%>
         <%= "#{@pet.name} is still up for adoption!"%>
-        <%= link_to("Adopt me!", new_adoption_path)%></li>
-      <%end%>
+        <%= link_to("Adopt me!", new_adoption_path)%>
+      <%end%><br><br>
+      <li><label>Likes:</label><h2><%=@pet.likes.count%></h2><br><br></li>
     </ul>
   </div>
 
 
-  <div class="container-fluid">
-    <label>Selfie:</label><br>
-    <%= image_tag(@pet.img_url, size: "650x900") %><br>
-    <label>Likes:</label>
-    <h2><%=@pet.likes.count%></h2><br><br>
+  <div class="a">
+    <%= image_tag(@pet.img_url, size: "450x500") %><br>
+    
   </div>
 
 <div class="container-fluid">

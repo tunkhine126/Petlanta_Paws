@@ -23,6 +23,18 @@
 	height: 200px;
 	margin: 1em;
 }	
+
+.c{
+	display: inline;
+	width: 400px;
+	height: 200px;
+	margin: 1em;
+}	
+
+.photo{
+	display: inline;
+}	
+
 body.home{
 	background: url("adorable-animal-blur-406014.jpg") no-repeat center center fixed;
 	background-size: cover;
