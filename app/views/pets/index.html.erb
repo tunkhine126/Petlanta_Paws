@@ -9,13 +9,11 @@
       <%= select_tag 'search', options_for_select(@pets.collect{ |p| [p.category] }.uniq!.insert(0, "Select a Pet Type")) %>
       <%= submit_tag ("Search Pets") %>
     <% end %>
-
+<h2><%=link_to("List a New Pet", new_pet_path)%></h2>
   <ul>
     <%@pets.each do |pet|%>
       <li><%= link_to(pet.name, pet_path(pet))%></li>
     <%end%>
   </ul>
+  <h5><%=link_to("View All Pets", pets_path)%></h5>
 </div>
-
-<h2><%=link_to("Back to All Pets", pets_path)%></h2>
-<h2><%=link_to("List a New Pet", new_pet_path)%></h2>
