@@ -5,9 +5,9 @@ class SessionsController < ApplicationController
 
    def create
      @user = User.find_by(username: params[:username])
-     if @user && @user.password == params[:password]
+     if @user && @user.authenticate(params[:password])
        session[:user_id] = @user.id
-       redirect_to user_path(@user)
+       redirect_to user_path(@user), notice: "Successfully logged in" 
      else
        @error = "Login unsuccessful... No dice."
        render :new
