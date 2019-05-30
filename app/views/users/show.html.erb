@@ -19,7 +19,7 @@
       <label>My Pets:</label><br>
         <% @user.pets.each do |pet|%>
         <li><%=link_to(pet.name, pet_path(pet))%></li><br>
-        <%end%>
+        <% end %>
     </ul>
   </div>
 
@@ -27,7 +27,7 @@
     <ul>
       <label>My Comments:</label><br>
         <%@user.comments.each do |comment|%>
-            <li><%=link_to(comment.text, pet_path(comment.pet))%></li>
-          <%end%>
+            <li> <%= link_to(comment.text, pet_path(comment.pet)) %> </li>
+        <% end %>
     </ul>
   </div>
