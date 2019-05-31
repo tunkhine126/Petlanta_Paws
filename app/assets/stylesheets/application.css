@@ -424,7 +424,15 @@ p {
 	.box {
 		border-color: rgba(144, 144, 144, 0.25);
 	}
-
+	footer {
+		position: absolute;
+		justify-content: center;
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		text-align: center;
+	  }
 /* Button */
 
 	input[type="submit"],
@@ -871,3 +879,6 @@ p {
 	.formerize-placeholder {
 		color: #bbb !important;
 	}
+.GL_logo {
+	width: 5%;
+}
