@@ -1,20 +1,19 @@
 <body class="container usershow">
 
-
-<div class="container-fluid">
-<br><br><h1><%= "Hello #{@user.username.capitalize}. Welcome to Petlanta Paws!"%></<h1><br>
-</div>
-  <div class="account-details">
-    <ul>
-      <li><label>Username:</label>
-        <%=@user.username%><br></li>
-      <li><label>Email:</label>
-        <%= @user.email%><br></li>
-      <li><%=link_to("Edit Your Information", edit_user_path(@user))%></li>
-      <li><%= link_to("Delete your Profile", user_path(@user), data: {confirm: "Are you sure you want to delete your account?"},
-      method: :delete)%> </li>
-    </ul>
+  <div class="container-fluid">
+    <br><br><h1><%= "Hello #{@user.username.capitalize}. Welcome to Petlanta Paws!"%></<h1><br>
   </div>
+    <div class="account-details">
+      <ul>
+        <li><label>Username:</label>
+          <%=@user.username%><br></li>
+        <li><label>Email:</label>
+          <%= @user.email%><br></li>
+        <li><%=link_to("Edit Your Information", edit_user_path(@user))%></li>
+        <li><%= link_to("Delete your Profile", user_path(@user), data: {confirm: "Are you sure you want to delete your account?"},
+        method: :delete)%> </li>
+      </ul>
+    </div>
 
 
   <div class="my-pets">
