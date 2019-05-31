@@ -1,3 +1,33 @@
 # README
 Petlanta Paws README
 
+Flatiron School Module 2 Project. Our group's love for pets was the inspiration for this project. We used our knowledge or Ruby on Rails, HTML, and CSS to create our project. 
+
+Getting Started
+Before you begin, fork and clone this repo, run `bundle install` and `rake db:migrate` to get started.
+
+Authors
+Will Jones | Tun Khine | Tiffani Weaver
+
+Acknowledgments
+GIT LIT 4/22 Flatiron Cohort
+
+Project Requirements:
+You should have least five models. You do not have to have all of these built out on day one. But by the end of the week, you should have at least five models.
+
+Some methods in your models. There should be at least twenty methods total in your models. These are to be used to better extract data from your tables.
+
+No APIs until you get approval from an instructor. The reason is because API's oftentimes leads you to learning the specific API really well, but not learning Rails that well. Rails is a more transferable skill. So stick with that.
+
+Specs - there should be at least 10 specs in your project (five per person).
+
+An analytics page - The main learning goal of this is to get you to write some interesting activerecord queries.
+
+No JavaScript. Stay focused on Rails for this project 
+
+Project Task Guidelines
+come up with idea, model out domain.
+add model tests, start building out basic features. Have some functionality built out by the end of the day.
+Iterate on the features that you built yesterday. Go from a 'skateboard' version to a scooter or a bicycle. It doesnt' have to be perfect, but it should be working.
+start styling/ cleaning up issues.
+issue cleanup and final demos.
