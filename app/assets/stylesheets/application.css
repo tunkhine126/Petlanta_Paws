@@ -112,14 +112,14 @@ body.home{
 	background: url("adorable-animal-blur-406014.jpg") no-repeat center center fixed;
 	background-size: cover;
 	height: 100%;
-	overflow: auto;
+	overflow: visible;
 }
 
 body.newhome{
 	background: url("newhome.jpg") no-repeat center center fixed;
 	background-size: cover;
 	height: 100%;
-	overflow: hidden;
+	overflow: visible
 }
 
 body.adoptions{
