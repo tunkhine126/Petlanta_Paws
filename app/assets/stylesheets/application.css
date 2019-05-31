@@ -43,10 +43,10 @@
 }
 
 .superpets{
-	display: block;
+	display: inline-block;
 	border-radius: 4px;
 	width: 300px;
-	height: 1200px;
+	min-height: 800px;
 	margin: 1em;
 	padding: 1em;
   background-color: rgba(255, 255, 255, 0.61);
@@ -136,7 +136,7 @@ body.usershow{
 	background: url("cute_puppy.jpg") no-repeat center center fixed;
 	background-size: cover;
 	height: 100%;
-	overflow: hidden;
+	overflow: visible;
 }
 
 body.allpets{
