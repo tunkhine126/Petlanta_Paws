@@ -49,12 +49,24 @@
   background-color: rgba(255, 255, 255, 0.61);
 }
 
+.card-body{
+	background-color: rgba(255, 255, 255, 0.61);
+	border-radius: 4px;
+}	
+
 .photo{
 	display: inline;
 }
 
 body.home{
 	background: url("adorable-animal-blur-406014.jpg") no-repeat center center fixed;
+	background-size: cover;
+	height: 100%;
+	overflow: hidden;
+}
+
+body.newhome{
+	background: url("newhome.jpg") no-repeat center center fixed;
 	background-size: cover;
 	height: 100%;
 	overflow: hidden;

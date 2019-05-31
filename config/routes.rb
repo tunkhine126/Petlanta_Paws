@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   post '/login', to: "sessions#create"
   get 'logout', to: "sessions#destroy", as: 'logout'
   get 'danceparty', to: "pets#danceparty"
-
+  get 'home', to: "users#home"
 end
