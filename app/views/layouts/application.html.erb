@@ -45,9 +45,11 @@
            </div>
          </li>
 
-         <li class="nav-link">
-           <a class="nav-link" href="/users/<%=session[:user_id]%>" tabindex="-1" aria-disabled="true">User Profile</a>
-         </li>
+         <% if session[:user_id] %>
+          <li class="nav-link">
+            <a class="nav-link" href="/users/<%=session[:user_id]%>" tabindex="-1" aria-disabled="true">User Profile</a>
+          </li>
+         <% end %>
 
          <li class="nav-link">
               <%if session[:user_id]%>
