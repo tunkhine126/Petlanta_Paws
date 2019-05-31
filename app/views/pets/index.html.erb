@@ -4,13 +4,13 @@
 
 
 <div class="container-fluid">
-
+<h4><%=link_to("List a New Pet", new_pet_path)%></h4>
   <h4>Search by Pet Type:</h4>
     <%= form_tag(pets_path, method: :get) do %>
       <%= select_tag 'search', options_for_select(@pets.collect{ |p| [p.category] }.uniq!.insert(0, "Select a Pet Type")) %><br>
       <%= submit_tag ("Search Pets") %>
     <% end %>
-<h2><%=link_to("List a New Pet", new_pet_path)%></h2>
+
   <ul>
     <%@pets.each do |pet|%>
       <li><%= link_to(pet.name, pet_path(pet))%></li>

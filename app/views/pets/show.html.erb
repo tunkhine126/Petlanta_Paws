@@ -42,10 +42,10 @@
 
   <div class="a">
     <%= image_tag(@pet.img_url, size: "450x500") %><br>
-    
   </div>
 
-<div class="container-fluid">
+
+<div class="d">
   <label>Comments:</label>
     <ul class="comments">
       <%if @pet.comments.empty?%>
@@ -56,13 +56,9 @@
           <label>By:</label>
           <%= comment.user.username.capitalize %><br>
           </li>
-      <%end%>
-      <%end%>
-    </ul >
- </div>
+        <%end%>
+      <%end%><br><br>
 
-<div class="actions">
-  <ul class="pet-actions">
     <li> <%= link_to("Create a Comment", new_comment_path(@pet))%> </li>
     <li> <%= link_to("Like!", new_like_path)%> </li>
     <li> <%= link_to("Adopt", new_adoption_path)%>
