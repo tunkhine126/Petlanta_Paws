@@ -54,14 +54,14 @@
                <%= link_to("Logout", logout_path, class: 'nav-link')%>
                <%else%>
                <%= link_to('Login', login_path, class: 'nav-link')%>
-               <%end%> 
+               <%end%>
           </li>
      </div>
    </nav>
 
      <!----- NAV BAR ------>
-    
-    
+
+
 
 
     <%=yield%>
@@ -72,13 +72,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <br><br>
-    <footer class="footer mt-auto py-3"> 
-      <div class="container">
-        <%= image_tag("paw logo.png")%> 
-        <span class="text-muted">Content by |GIT LIT|42219| 1-800-ADOPT-A-PET  </span>
-        <%= image_tag("gitlitlogo.png", class: "GL_logo") %>
-      </div>
-    </footer>  
 
   </body>
 </html>
