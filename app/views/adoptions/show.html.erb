@@ -4,14 +4,14 @@
   </div><br><br>
 
 
-  <div class="container_adopt">
+  <div class="container adopt">
     <h4>
       Congratulations <%= @adoption.user.username.capitalize %>! You have adopted <%= @adoption.pet.name %><br><br>
       <%= @adoption.pet.name %> is very excited for his/her new home!
     </h4><br><br>
   </div>
 
- <div class="b">
+ <div class="adoptioninfo">
     <ul class="pet-adoption-info-details">
       <li><label>Name:</label>
       <%= @adoption.pet.name.capitalize %><br></li>
@@ -38,9 +38,8 @@
       <%= @adoption.user.username.capitalize %><br></li>
     </div>
 
-    <div class="a">
-    <%= image_tag(@adoption.pet.img_url, size: "450x500") %><br><br>
+    <div class="adoptionimage">
+    <%= image_tag(@adoption.pet.img_url, size: "450x500") %>
     </div>
 
-  </div>
 </body>
